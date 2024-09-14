@@ -1,0 +1,18 @@
+/* css padronizador
+ */
+body {
+  background-image: linear-gradient(to right, #000000, #070707, #0e0e0e, #131313, #171717, #1b1b1b, #1f1f1f, #232323, #282828, #2d2d2d, #333333, #383838);
+}
+
+@font-face{
+  font-family: Comfortaa;
+  src: url(../public//Comfortaa-VariableFont_wght.ttf);
+}
+@font-face{
+  font-family: JetBrains;
+  src: url(../public/JetBrainsMonoNerdFontMono-Regular.ttf);
+}
+@font-face{
+  font-family: RobotoMono;
+  src: url(../public/RobotoMono-VariableFont_wght.ttf);
+}
