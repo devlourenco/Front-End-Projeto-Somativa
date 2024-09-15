@@ -1,8 +1,2 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+GymBook
+GymBook é um aplicativo de anotações focado no acompanhamento de treinos de academia, criado para facilitar o registro e o monitoramento de seus exercícios. Com o GymBook, você pode anotar a carga utilizada, o número de repetições e séries de cada exercício, além de acompanhar seu progresso ao longo do tempo. A ideia é otimizar o acompanhamento semanal dos treinos, ajudando a visualizar sua evolução e ajustar o plano de treino de acordo com suas metas.
