@@ -1,0 +1,87 @@
+.image {
+  display: flex;
+  width: 100px;
+  padding-left: 100px;
+  padding-top: 12px;
+  height: 100px;
+  margin-left: 100px;
+}
+
+.table {
+  display: flex;
+  background-color: black;
+  margin-top: 100px;
+  height: 680px;
+  width: 500px;
+  border-radius: 40px;
+  border-style: inset;
+  border-color: #4b5563;
+  margin-left: 725px;
+}
+
+.text {
+  font-size: 20px;
+  color: white;
+  font-family: JetBrains;
+  margin-top: 225px;
+  margin-left: -110px;
+  text-align: center;
+  width: 500px;
+}
+
+.title {
+  padding-top: 100px;
+  text-align: justify;
+  display: flex;
+  font-size: 24px;
+  color: white;
+  font-family: JetBrains;
+  align-items: center;
+  margin-top: -420px;
+  margin-left: -80px;
+}
+
+.InputContainer {
+  height: 40px;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  padding-top: 100px;
+  margin-top: 300px;
+  margin-bottom: 250px;
+  margin-left: -220px;
+  margin-right: 141px;
+  flex-direction: column;
+  gap: 90%;
+}
+
+.input {
+  background-color: whitesmoke;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 25px;
+  border-radius: 100px;
+  margin-left: 6px;
+  margin-top: -20px;
+  text-align: center;
+  font-family: JetBrains;
+}
+
+.input::placeholder {
+  font-size: 12px;
+  font-family: JetBrains;
+}
+
+.button {
+  margin-left: 20px;
+  border-radius: 50px;
+  padding-left: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 170px; /* ajuste conforme necessário */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: JetBrains;
+}
