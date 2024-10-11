@@ -4,7 +4,7 @@
   padding-left: 100px;
   padding-top: 12px;
   height: 100px;
-  margin-left: 100px;
+  margin-left: 430px;
 }
 
 .table {
@@ -16,29 +16,29 @@
   border-radius: 40px;
   border-style: inset;
   border-color: #4b5563;
-  margin-left: 725px;
+  margin-left: 360px;
 }
 
 .text {
-  font-size: 20px;
+  font-size: 26px;
   color: white;
   font-family: JetBrains;
   margin-top: 225px;
   margin-left: -110px;
   text-align: center;
-  width: 500px;
+  width: 100%;
 }
 
 .title {
   padding-top: 100px;
-  text-align: justify;
+  width: 600px;
   display: flex;
-  font-size: 24px;
+  font-size: 36px;
   color: white;
   font-family: JetBrains;
   align-items: center;
   margin-top: -420px;
-  margin-left: -80px;
+  margin-left: -110px;
 }
 
 .InputContainer {
