@@ -4,7 +4,7 @@ import Navbar from "./components/layout/NavBar";
 import Home from "./components/pages/Home/Home";
 import Metricas from "./components/pages/Metricas/Metricas";
 import Progresso from "./components/pages/Progresso/Progresso";
-import Perfil from "./components/pages/Perfil/Perfil";
+// import Perfil from "./components/pages/Perfil/Perfil";
 import Signup from "./components/pages/SignUp/SignUp";
 
 export default function App() {
@@ -13,12 +13,12 @@ export default function App() {
       <BrowserRouter>
         <Container>
           <Routes>
-            <Route path="/signup" element={<Signup />} />
             <Route path="/" element={<Navbar />}>
               <Route path="/" element={<Home />} />
               <Route path="/metricas" element={<Metricas />} />
               <Route path="/progresso" element={<Progresso />} />
-              <Route path="/perfil" element={<Perfil />} />
+              {/* <Route path="/signup" element={<Perfil />} /> */}
+              <Route path="/signup" element={<Signup />} /> 
             </Route>
           </Routes>
         </Container>

@@ -15,8 +15,8 @@ export default function NavBar() {
           <Link to='/progresso'>
             <li className={style.progresso}>Ver Progresso</li>
           </Link>
-          <Link to='/perfil'>
-            <li className={style.perfil}>Perfil</li>
+          <Link to='/signup'>
+            <li className={style.perfil}>Cadastro</li>
           </Link>
         </ul>
       </nav>
