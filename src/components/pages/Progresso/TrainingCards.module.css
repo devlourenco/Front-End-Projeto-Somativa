@@ -1,0 +1,31 @@
+.trainingCard {
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 280px;
+    flex-grow: 1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    color: white;
+    margin: 10px 0;
+  }
+  
+  .trainingCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .trainingCard img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #444;
+  }
+  
+  .grupo_muscular {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    color: #ddd;
+  }

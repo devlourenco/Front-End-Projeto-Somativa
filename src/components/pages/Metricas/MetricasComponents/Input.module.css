@@ -1,0 +1,44 @@
+.inputControl {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.inputControl label {
+  color: whitesmoke;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.inputControl input {
+  width: 100%;
+  width: 500px;
+  height: 55px;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid whitesmoke;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+
+.inputControl input::placeholder {
+  color: #cccccc;
+  font-size: 1em;
+  text-align: center;
+}
+
+.inputControl input:focus {
+  outline: none;
+  border-color: black;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.inputControl input:focus::placeholder {
+  color: black;
+}

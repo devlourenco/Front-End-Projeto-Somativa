@@ -1,0 +1,51 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
+
+.info {
+  display: grid;
+  align-items: start;
+  justify-items: start;
+  align-self: self-start;
+}
+
+.container_img {
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+
+.img_training_detail {
+  display: grid;
+  align-items: end;
+  justify-items: end;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.grupo_muscular {
+  font-size: 40px;
+  padding: 10px;
+}
+
+.exercicios {
+  font-size: 30px;
+  color: #ccc;
+  padding: 10px;
+}
+
+.repeticoes {
+  font-size: 20px;
+  text-align: justify;
+  padding: 10px;
+}
+
+.carga_de_treino {
+  font-size: 20px;
+  text-align: justify;
+  padding: 10px;
+}

@@ -1,61 +1,34 @@
-.corpo {
+
+.corpo { 
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 45%;
-  margin: 70px auto;
-  margin-bottom: 20px;
+  width: 90%;
+  max-width: 700px;
+  margin: 70px auto 20px auto;
   border-radius: 50px;
-  font-family: JetBrains, sans-serif;
+  font-family: 'JetBrains', sans-serif;
   background-color: rgb(41, 39, 39);
   padding: 40px;
-  height:630px;
+  box-sizing: border-box;
+  height: 600px;
 }
+
 
 .titulo {
   color: white;
-  font-size: 46px;
+  font-size: 2.5em;
   margin-bottom: 20px;
+  text-align: center;
 }
+
 
 .selectContainer {
   display: flex;
   justify-content: center;
+  width: 100%;
   margin-bottom: 20px;
 }
 
-.tabela {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
 
-.planilha {
-  border-collapse: collapse;
-  width: 80%;
-  margin-top: 10px;
-  border-radius: 10px;
-  background-color: rgb(80, 80, 80);
-}
 
-.planilha th, .planilha td {
-  border: 1px solid #4b5563;
-  text-align: center;
-  padding: 10px;
-  color: white;
-}
-
-.planilha th {
-  background-color: rgb(100, 100, 100);
-}
-
-.Select {
-  height: 50px;
-  width: 300px;
-  border-radius: 50px;
-  background-color: #2F4F4F;
-  color: whitesmoke;
-  display: block;
-  margin: 0 auto;
-}

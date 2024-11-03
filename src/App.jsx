@@ -6,6 +6,7 @@ import Metricas from "./components/pages/Metricas/Metricas";
 import Progresso from "./components/pages/Progresso/Progresso";
 // import Perfil from "./components/pages/Perfil/Perfil";
 import Signup from "./components/pages/SignUp/SignUp";
+import DetailTraining from "./components/pages/Details/DetailTraining"
 
 export default function App() {
   return (
@@ -19,6 +20,10 @@ export default function App() {
               <Route path="/progresso" element={<Progresso />} />
               {/* <Route path="/signup" element={<Perfil />} /> */}
               <Route path="/signup" element={<Signup />} /> 
+              <Route
+              path="/DetailTraining/:idTreino"
+              element={<DetailTraining/>}
+              />{" "}
             </Route>
           </Routes>
         </Container>

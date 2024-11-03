@@ -1,22 +1,20 @@
-import React from "react";
 import style from "./Input.module.css";
 
 export default function Input({
   type,
   text,
   name,
-  placeHolder,
+  placeholder,
   handlerChangeTraining,
 }) {
   return (
     <div className={style.inputControl}>
-      <label htmlFor={name}></label>
-      {text}
+      <label htmlFor={name}>{text}</label>
       <input
         type={type}
         name={name}
         id={name}
-        placeholder={placeHolder}
+        placeholder={placeholder}
         onChange={handlerChangeTraining}
       />
     </div>

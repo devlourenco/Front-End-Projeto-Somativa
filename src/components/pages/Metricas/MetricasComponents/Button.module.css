@@ -1,0 +1,39 @@
+.button {
+  display: inline-block;
+  margin-left: 165px;
+  padding: 12px 24px;
+  background-color: black;
+  border: groove;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: whitesmoke;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  border: groove;
+  border-color: black;
+  color: black;
+}
+
+.button:active {
+  transform: scale(0.98);
+  background-color: whitesmoke;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 255, 127, 0.5);
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+}

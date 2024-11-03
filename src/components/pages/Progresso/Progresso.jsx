@@ -1,8 +1,49 @@
-import style from "../Progresso/Progresso.module.css"
+import { useEffect, useState } from "react";
+import style from "../Progresso/Progresso.module.css";
+import Container from "../../layout/Container";
+import TrainingCards from "./TrainingCards";
+import TrainingContainer from "./TrainingContainer";
+import costas from "../../../assets/back.jpg";
+
 export default function Progresso() {
+  const [training, setTraining] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/allTraining", {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+      },
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        if (data && data.data) {
+          setTraining(data.data);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
-    <>
-      <h1 className={style.progresso}>Ver Progresso</h1>
-    </>
+    <Container>
+      <section className={style.list_training_container}>
+        <h1>LIST TRAININGS</h1>
+        <TrainingContainer>
+          {training.map((training) => (
+            <TrainingCards
+              idTreino={training.idTreino}
+              grupo_muscular={training.grupo_muscular}
+              imagem={costas}
+              key={training.idTreino}
+            />
+          ))}
+        </TrainingContainer>
+      </section>
+    </Container>
   );
 }
