@@ -1,57 +1,130 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import style from "../Details/DetailTraining.module.css";
-import costas from "../../../assets/back.jpg";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import styles from "./DetailTraining.module.css";
+import costas from "../../../assets/back.jpg"
 
-const DetailTraining = () => {
-  const idTreino = useParams();
-  console.log("Código do treino :" + idTreino);
-
-  const [training, setTraining] = useState({});
+export default function DetailTraining() {
+  const navigate = useNavigate();
+  const { idTreino } = useParams();
+  const [trainingDetails, setTrainingDetails] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/training/${idTreino}`, {
+    fetch(`http://localhost:5000/listTraining/${idTreino}`, {
       method: "GET",
-      mode: "cors",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "*",
       },
     })
       .then((resp) => resp.json())
       .then((data) => {
-        setTraining(data.training);
-        console.log(data.training);
+        if (data && !data.errorStatus) {
+          setTrainingDetails(data.training);
+        }
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        console.log(error);
       });
   }, [idTreino]);
 
+  const handleUpdate = () => {
+    fetch(`http://localhost:5000/editTraining/${idTreino}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(trainingDetails),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (!data.errorStatus) {
+          navigate("/progresso");
+        }
+      })
+      .catch((error) => {
+        console.error("Erro ao atualizar treino:", error);
+      });
+  };
+
+  const handleDelete = () => {
+    fetch(`http://localhost:5000/deleteTraining/${idTreino}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (!data.errorStatus) {
+          navigate("/progresso");
+        }
+      })
+      .catch((error) => {
+        console.error("Erro ao deletar treino:", error);
+      });
+  };
+
+  const handleChange = (event) => {
+    setTrainingDetails({
+      ...trainingDetails,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   return (
-    <div className={style.grid}>
-      <div className={style.container_img}>
-        <img
-          className={style.img_training_detail}
-          src={costas}
-          alt="Treino de costas"
-        />
-      </div>
-
-      <div className={style.info}>
-        <span className={style.grupo_muscular}>{training.grupo_muscular}</span>
-
-        <span className={style.exercicios}>{training.exercicios}</span>
-
-        <span className={style.repeticoes}>{training.repeticoes}</span>
-
-        <span className={style.carga_de_treino}>
-          {training.carga_de_treino}
-        </span>
-      </div>
+    <div className={styles.container}>
+      {trainingDetails && (
+        <div className={styles.content}>
+          <div className={styles.container_img}>
+            <img
+              src={trainingDetails.imagem || costas}
+              alt={trainingDetails.grupo_muscular}
+              className={styles.img_training_detail}
+            />
+          </div>
+          <div className={styles.info}>
+            <input
+              type="text"
+              name="grupo_muscular"
+              value={trainingDetails.grupo_muscular}
+              onChange={handleChange}
+              placeholder="Digite o grupo muscular do treino"
+              className={styles.grupo_muscular}
+            />
+            <input
+              type="text"
+              name="exercicios"
+              value={trainingDetails.exercicios}
+              onChange={handleChange}
+              placeholder="Digite os exercicios do treino"
+              className={styles.exercicios}
+            />
+            <input
+              type="text"
+              name="repeticoes"
+              value={trainingDetails.repeticoes}
+              onChange={handleChange}
+              placeholder="Digite as repetições em cada exercício do treino"
+              className={styles.repeticoes}
+            />
+            <input
+              type="text"
+              name="carga_do_treino"
+              value={trainingDetails.carga_do_treino}
+              onChange={handleChange}
+              placeholder="Digite a carga usada em cada exercício do treino"
+              className={styles.carga_de_treino}
+            />
+          </div>
+          <div className={styles.buttons}>
+            <button className={styles.updateButton} onClick={handleUpdate}>
+              Atualizar
+            </button>
+            <button className={styles.deleteButton} onClick={handleDelete}>
+              Deletar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
-};
-
-export default DetailTraining;
+}

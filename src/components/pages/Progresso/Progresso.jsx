@@ -14,8 +14,6 @@ export default function Progresso() {
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "*",
       },
     })
       .then((resp) => resp.json())

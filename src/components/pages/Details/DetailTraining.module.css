@@ -1,51 +1,99 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 10px;
-}
-
-.info {
-  display: grid;
-  align-items: start;
-  justify-items: start;
-  align-self: self-start;
-}
-
-.container_img {
-  display: grid;
+.container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: end;
+  padding: 20px;
+  background-color: rgb(41, 39, 39);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
+.container_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .img_training_detail {
-  display: grid;
-  align-items: end;
-  justify-items: end;
-  width: 300px;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.grupo_muscular,
+.exercicios,
+.repeticoes,
+.carga_de_treino {
+  width: 100%;
+  width: 670px;
+  height: 55px;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid whitesmoke;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 1.1em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.updateButton,
+.deleteButton {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border: none;
   border-radius: 5px;
 }
 
-.grupo_muscular {
-  font-size: 40px;
-  padding: 10px;
+.updateButton {
+  background-color: whitesmoke;
+  color: black;
 }
 
-.exercicios {
-  font-size: 30px;
-  color: #ccc;
-  padding: 10px;
+.deleteButton {
+  background-color: black;
+  color: white;
 }
 
-.repeticoes {
-  font-size: 20px;
-  text-align: justify;
-  padding: 10px;
+.updateButton:hover {
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 8px;
+  border: groove;
+  border-color: white;
 }
 
-.carga_de_treino {
-  font-size: 20px;
-  text-align: justify;
-  padding: 10px;
+.deleteButton:hover {
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 8px;
+  border: groove;
+  border-color: black;
 }
+
